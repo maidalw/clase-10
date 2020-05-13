@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <!-- Search Engine -->
+<!-- Search Engine -->
 <meta name="description" content="La cocina fácil y rápida ha sido una de las tendencias que hasta ahora ha marcado la cuarentena, predominando lo dulce sobre lo salado.">
 <meta name="image" content="https://i.ibb.co/8dCyvyn/image-bg.jpg">
 <!-- Schema.org for Google -->
@@ -18,12 +18,39 @@
 <!-- Open Graph general (Facebook, Pinterest & Google+) -->
 <meta name="og:title" content="Bootstrap">
 <meta name="og:description" content="La cocina fácil y rápida ha sido una de las tendencias que hasta ahora ha marcado la cuarentena, predominando lo dulce sobre lo salado.">
-<meta name="og:type" content="website">   
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<meta name="og:type" content="website">    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+    body{
+    font-family: 'Montserrat', sans-serif;
+    }
+</style>
     <title>Bootstrap</title>
 </head>
 
-<body class="bg-light">
+<body class="bg-light pt-5">
+
+     <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <div class="container">
+  <a class="navbar-brand" href="index.html">Google Trends</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarCollapse">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.html">Inicio<span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page-1.html">Fenómenos</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="page-2.html">Búsquedas</a>
+      </li>
+    </ul>
+  </div>
+</div>
+</nav>
     <div class="container py-3">
         <div class="row">
             <header class="col-12 mb-3">
@@ -53,7 +80,7 @@
         var texto = ["3 ingredient CHOCOLATE CAKE ! Lock Down Cake Recipe!", "Oreo Cake Only 3 Ingredients In Lock down", "Birthday Cake Only 3 Ingredients in Lock down", "Steamed Condensed Milk Cake Soft And Fluffy | No Mixer No Oven", "No Cheese No Yeast No Oven Pizza Recipe For Lockdown | White Sauce Pizza Recipe | Toasted", "6 simple indian recipes for lockdown with minimal ingredients | easy indian recipes"];
         // Referencias para lo que sigue https://api.jquery.com/jquery.each/ ({ https://api.jquery.com/append/ })
         $.each( texto, function( i, frase ) {
-            $("#articulos").append("<div class='col-lg-6 col-xl-4 mb-4'><article class='bg-primary text-light p-3 shadow-sm rounded'>"+frase+"</article></div>");
+            $("#articulos").append("<div class='col-md-6 col-lg-4 col-xl-3 mb-4'><article class='bg-warning text-light p-3 shadow-lg rounded'>"+frase+"</article></div>");
         });
         // Lo que sigue aprovecha Bootstrap y jQuery. Afecta a la proporción del video embebido, quitando/poniendo una clase
         $(window).bind("load resize",function() {
